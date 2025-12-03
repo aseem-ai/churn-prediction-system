@@ -24,13 +24,16 @@ The application follows a decoupled microservices pattern:
 
 ```mermaid
 graph LR
-    A[User (Streamlit UI)] -->|JSON Request| B[AWS Cloud (EC2)]
-    subgraph "Docker Container"
-        B --> C[FastAPI Server]
-        C -->|Features| D[XGBoost Model]
-        D -->|Prediction (Risk %)| C
-    end
-    C -->|Response| A
+  A["User (Streamlit UI)"] -->|JSON Request| B["AWS Cloud (EC2)"]
+
+  subgraph "Docker Container"
+    B --> C["FastAPI Server"]
+    C -->|Features| D["XGBoost Model"]
+    D -->|Prediction (Risk %)| C
+  end
+
+  C -->|Response| A
+
 ```
 
 ---
