@@ -1,0 +1,15 @@
+*.pem
+.env
+secrets.json
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.pytest_cache/
+
+# System
+.DS_Store
+
+# Large Data (Optional, but good practice)
+data/
